@@ -1,0 +1,112 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 300px;
+  margin: 0;
+  color: #f4f7ff;
+  background: #09152b;
+}
+
+.popup-shell {
+  padding: 14px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(83, 90, 213, .24), transparent 42%),
+    linear-gradient(145deg, #122545, #09152b 72%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+header img {
+  border-radius: 9px;
+  box-shadow: 0 7px 16px rgba(0, 0, 0, .25);
+}
+
+header div { min-width: 0; flex: 1; }
+h1 { margin: 0 0 2px; font-size: 14px; font-weight: 700; }
+header p { margin: 0; color: #91a3c4; font-size: 11px; }
+
+.version-badge {
+  padding: 4px 7px;
+  color: #a9f0ca;
+  background: rgba(19, 142, 91, .2);
+  border: 1px solid rgba(58, 210, 137, .24);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.update-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 66px;
+  padding: 11px;
+  background: rgba(255, 255, 255, .065);
+  border: 1px solid rgba(164, 194, 255, .16);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 5, 19, .2), inset 0 1px rgba(255, 255, 255, .06);
+}
+
+.status-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 32px;
+  height: 32px;
+  color: #a9f0ca;
+  background: rgba(19, 142, 91, .2);
+  border: 1px solid rgba(58, 210, 137, .24);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.status-copy { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+.status-copy strong { font-size: 12px; }
+.status-copy span { color: #aab8d1; font-size: 10.5px; line-height: 1.35; }
+
+.primary-button {
+  width: 100%;
+  height: 36px;
+  margin-top: 10px;
+  color: #fff;
+  background: linear-gradient(145deg, #5964dc, #3940a2);
+  border: 1px solid rgba(165, 174, 255, .45);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(31, 36, 125, .28), inset 0 1px rgba(255, 255, 255, .13);
+  font: 650 11px "Segoe UI Variable", "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.primary-button:hover { filter: brightness(1.12); }
+.primary-button:active { transform: scale(.99); }
+.primary-button:disabled { cursor: wait; opacity: .7; }
+
+.store-note {
+  margin: 9px 4px 0;
+  color: #7385a8;
+  font-size: 9.5px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.update-ready .status-icon {
+  color: #fff1b0;
+  background: rgba(194, 132, 24, .2);
+  border-color: rgba(242, 187, 63, .28);
+}
+
+.update-ready .version-badge {
+  color: #fff1b0;
+  background: rgba(194, 132, 24, .2);
+  border-color: rgba(242, 187, 63, .28);
+}

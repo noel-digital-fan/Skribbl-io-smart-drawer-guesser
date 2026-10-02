@@ -1,0 +1,64 @@
+/* Isolated drawing-panel layout. Source pixels are never read from styled previews. */
+#game-canvas canvas{filter:none!important;mix-blend-mode:normal!important}
+#skribbl-guesser-panel [hidden]{display:none!important}
+#skribbl-guesser-panel .sg-body{max-height:calc(100vh - 155px);overflow-y:auto}
+#skribbl-guesser-panel .sgd-tabs{display:flex;gap:4px;padding:4px;margin-bottom:12px;background:#09172d;border:1px solid #30496b;border-radius:10px}
+#skribbl-guesser-panel .sgd-tabs button{flex:1;padding:8px;border:0;border-radius:7px;background:transparent;color:#a9bdd9;font:600 12px "Segoe UI",sans-serif;cursor:pointer}
+#skribbl-guesser-panel .sgd-tabs button[aria-selected=true]{background:#294a73;color:#fff}
+#skribbl-guesser-panel .sgd{position:relative;color:#dae8ff;font:12px "Segoe UI",sans-serif}
+#skribbl-guesser-panel .sgd-settings{position:relative;background:#10213d;border:1px solid #45668b;border-radius:10px;padding:12px;box-shadow:0 8px 24px #0008}
+#skribbl-guesser-panel .sgd-settings .sgd-options{margin-top:0}
+#skribbl-guesser-panel .sgd-settings{margin-top:10px;box-shadow:none}
+#skribbl-guesser-panel .sgd-shared-footer{margin-top:12px}
+#skribbl-guesser-panel .sgd select{cursor:pointer;transition:border-color 160ms ease,box-shadow 160ms ease}
+#skribbl-guesser-panel .sgd select:hover:not(:disabled){border-color:#6baaf0;box-shadow:0 0 0 1px #6baaf033}
+#skribbl-guesser-panel .sgd select:focus{outline:none;border-color:#75baff;box-shadow:0 0 0 2px #75baff33}
+#skribbl-guesser-panel .sgd select:disabled{cursor:default;opacity:.6}
+#skribbl-guesser-panel .sgd-tools{display:flex;align-items:baseline;gap:8px}
+#skribbl-guesser-panel .sgd-google{flex:1;text-align:center;text-decoration:none;border:1px solid #365478;border-radius:7px;background:#233b5d;color:#deedff;padding:7px 8px;font:600 11px "Segoe UI",sans-serif;cursor:pointer}
+#skribbl-guesser-panel .sgd-google:hover{border-color:#6baaf0;background:#2b4c76}
+#skribbl-guesser-panel .sgd-google[aria-disabled=true]{opacity:.45;pointer-events:none}
+#skribbl-guesser-panel .sgd-text-form{margin-top:8px}
+#skribbl-guesser-panel .sgd-text-form>label{display:block;margin-bottom:4px;color:#aec3de;font-size:10px}
+#skribbl-guesser-panel .sgd-text-form>div{display:flex;gap:5px}
+#skribbl-guesser-panel .sgd-input-wrap{position:relative;display:flex;flex:1;min-width:0}
+#skribbl-guesser-panel .sgd-text-input{flex:1;width:0;min-height:32px;max-height:92px;padding-right:46px!important;resize:vertical;line-height:1.3;overflow-y:auto;background:rgba(2,11,29,.72)!important;border:1px solid rgba(169,197,255,.24)!important;border-radius:8px;transition:background 160ms ease,border-color 160ms ease}
+#skribbl-guesser-panel .sgd-text-input:hover{background:rgba(12,29,58,.96)!important;border-color:rgba(129,180,255,.52)!important;box-shadow:0 0 0 1px rgba(96,165,250,.1)}
+#skribbl-guesser-panel .sgd-text-input:focus{outline:none;border-color:rgba(169,197,255,.24)!important;background:rgba(2,11,29,.72)!important}
+#skribbl-guesser-panel .sgd-text-clear{position:absolute;top:7px;right:22px;width:20px;height:20px;padding:0!important;border:0!important;border-radius:50%;background:transparent!important;color:#dce9ff!important;font:700 16px/18px "Segoe UI",sans-serif}
+#skribbl-guesser-panel .sgd-text-clear:hover{background:#6baaf033!important;color:#fff!important}
+#skribbl-guesser-panel .sgd-text-draw{flex:0 0 auto}
+#skribbl-guesser-panel .sgd-text-form small{display:block;margin-top:4px;color:#93aac7;font-size:9px;line-height:1.35}
+@property --sgd-angle{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes sgd-outline-spin{to{--sgd-angle:360deg}}
+#skribbl-guesser-panel .sgd-google.sgd-own-turn{border:2px solid transparent;padding:6px 7px;background:linear-gradient(#233b5d,#233b5d) padding-box,conic-gradient(from var(--sgd-angle),#53dcff,#9272ff,#e17bef,#53dcff) border-box;animation:sgd-outline-spin 2.5s linear infinite}
+@media(prefers-reduced-motion:reduce){#skribbl-guesser-panel .sgd-google.sgd-own-turn{animation:none}}
+#skribbl-guesser-panel .sgd-heading{font-weight:700}
+#skribbl-guesser-panel .sgd-heading small{float:right;color:#8cc9bb;font-size:10px;font-weight:400}
+#skribbl-guesser-panel .sgd-word{margin:9px 0;line-height:1.45}
+#skribbl-guesser-panel .sgd input,#skribbl-guesser-panel .sgd textarea,#skribbl-guesser-panel .sgd select{box-sizing:border-box;background:#07162c;color:#e5edfa;border:1px solid #324b6e;border-radius:7px;padding:7px;font:11px "Segoe UI",sans-serif;min-width:0}
+#skribbl-guesser-panel .sgd button{border:1px solid #365478;border-radius:7px;background:#233b5d;color:#deedff;padding:7px 8px;font:600 11px "Segoe UI",sans-serif;cursor:pointer}
+#skribbl-guesser-panel .sgd button:hover:not(:disabled){border-color:#6baaf0;background:#2b4c76}
+#skribbl-guesser-panel .sgd button:disabled{opacity:.45;cursor:default}
+#skribbl-guesser-panel .sgd :focus-visible:not(.sgd-text-input),#skribbl-guesser-panel .sgd-tabs :focus-visible{outline:2px solid #75baff;outline-offset:2px}
+#skribbl-guesser-panel .sgd-disclosure{color:#93aac7;font-size:10px;line-height:1.45;margin:7px 0 10px}
+#skribbl-guesser-panel .sgd-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+#skribbl-guesser-panel .sgd-options label{font-size:10px;color:#aec3de}
+#skribbl-guesser-panel .sgd-options select{display:block;width:100%;margin-top:4px}
+#skribbl-guesser-panel .sgd-estimate{font-size:10px;color:#8ed5c6;margin-top:6px}
+#skribbl-guesser-panel .sgd-credit{font-size:9px;line-height:1.4;margin-top:5px;overflow-wrap:anywhere;max-height:50px;overflow:auto}
+#skribbl-guesser-panel .sgd-credit a{color:#a1c9ff}
+#skribbl-guesser-panel .sgd-credit span{display:block;color:#97abc6}
+#skribbl-guesser-panel .sgd-status{color:#b1c6e1;font-size:11px;line-height:1.45;margin:10px 0}
+#skribbl-guesser-panel .sgd-actions{display:flex;gap:5px}
+#skribbl-guesser-panel .sgd-actions button{flex:1}
+@media(prefers-reduced-motion:reduce){#skribbl-guesser-panel .sgd *{transition:none!important}}
+#skribbl-guesser-panel .sgd .sgd-dropzone{width:100%;margin-top:6px;padding:12px 6px;border:1px dashed #5b8caf;background:#102a42;line-height:1.6}
+#skribbl-guesser-panel .sgd-dropzone small{font-weight:400;color:#a8c4dc}
+#skribbl-guesser-panel .sgd-drag-over .sgd-dropzone{background:#174a57;border-color:#66dfc6;box-shadow:0 0 0 2px #66dfc644}
+#game-canvas canvas.sgd-drag-over{outline:4px dashed #66dfc6;outline-offset:-5px}
+/* Only the incoming pane fades; the old pane is hidden immediately so it
+   cannot intercept clicks or keyboard focus. Older browsers simply show it. */
+#skribbl-guesser-panel :is(#sgd-guess-pane,#sgd-draw-pane){opacity:1;transition:opacity 160ms ease-out}
+@starting-style{#skribbl-guesser-panel :is(#sgd-guess-pane,#sgd-draw-pane){opacity:.2}}
+@media(prefers-reduced-motion:reduce){#skribbl-guesser-panel :is(#sgd-guess-pane,#sgd-draw-pane){transition:none}}

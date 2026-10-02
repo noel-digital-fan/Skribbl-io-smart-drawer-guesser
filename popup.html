@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skribbl Auto Guess And Draw</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup-shell">
+    <header>
+      <img src="icon48.png" alt="" width="32" height="32">
+      <div>
+        <h1>Skribbl Auto Guess And Draw</h1>
+        <p>Version <span id="current-version">—</span></p>
+      </div>
+      <span id="version-badge" class="version-badge">Current</span>
+    </header>
+
+    <section class="update-card" aria-live="polite">
+      <div class="status-icon" id="status-icon">✓</div>
+      <div class="status-copy">
+        <strong id="status-title">Ready to check</strong>
+        <span id="status-message">Check whether a newer store version is available.</span>
+      </div>
+    </section>
+
+    <button id="check-update" class="primary-button" type="button">
+      <span id="button-icon">↻</span>
+      <span id="button-label">Check for updates</span>
+    </button>
+
+    <p class="store-note">Store installations also update automatically in the background.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
