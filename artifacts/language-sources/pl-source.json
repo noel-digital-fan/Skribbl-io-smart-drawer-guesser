@@ -1,0 +1,21 @@
+{
+  "language": "pl",
+  "languageName": "Polish",
+  "repo": "ErenoGit/SkribblHelperPL",
+  "commit": "00c12f302ce74c1dc520b3a0a7b586928c2b38d8",
+  "date": "2024-11-06T21:49:46Z",
+  "sourcePath": "PossibleWordsPL.js",
+  "sourceUrl": "https://github.com/ErenoGit/SkribblHelperPL/blob/00c12f302ce74c1dc520b3a0a7b586928c2b38d8/PossibleWordsPL.js",
+  "rawUrl": "https://raw.githubusercontent.com/ErenoGit/SkribblHelperPL/00c12f302ce74c1dc520b3a0a7b586928c2b38d8/PossibleWordsPL.js",
+  "license": "MPL-2.0",
+  "licenseFile": "pl-MPL-2.0.txt",
+  "sourceSha256": "987b9d3c8bca9c09b36d37b14193be6c025c71534d3cbc994704d1b8155f7149",
+  "packagedSha256": "cf9af4fe5eb6904d19cf2f749cdb2aff4c8bfe62ab46df5c18fda1eac00764f8",
+  "entries": 2238,
+  "uniqueEntries": 2238,
+  "normalizedUniqueEntries": 2237,
+  "transformation": "JSON array parsed from const declaration and flattened in original order into UTF8 lines; all word spellings unchanged.",
+  "provenance": "Upstream README states author obtained Skribbl.io Polish passwords with https://github.com/ErenoGit/SkribblWordsSaver. Completeness/current coverage unverified.",
+  "readmeUrl": "https://github.com/ErenoGit/SkribblHelperPL/blob/00c12f302ce74c1dc520b3a0a7b586928c2b38d8/README.md",
+  "licenseUrl": "https://github.com/ErenoGit/SkribblHelperPL/blob/00c12f302ce74c1dc520b3a0a7b586928c2b38d8/LICENSE"
+}

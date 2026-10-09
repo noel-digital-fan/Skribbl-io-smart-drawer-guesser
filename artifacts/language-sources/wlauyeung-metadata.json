@@ -1,0 +1,107 @@
+[
+  {
+    "lang": "en",
+    "name": "English",
+    "skribblLanguageId": 0,
+    "entryCount": 3692,
+    "uniqueCount": 3692,
+    "source": "https://raw.githubusercontent.com/wlauyeung/Skribblio-Word-Bank/1702cddfc72eb0e38a16447365f4ad485004c235/words_en_v1.0.0_raw.json",
+    "repository": "https://github.com/wlauyeung/Skribblio-Word-Bank",
+    "revision": "1702cddfc72eb0e38a16447365f4ad485004c235",
+    "license": "MIT",
+    "licenseFile": "LICENSE-wlauyeung.txt",
+    "sha256": "1a38fc474adcde59a19ced830c55538b9eba08c6922bdfb17f13d5326f9b85c3",
+    "provenance": "Community Skribbl answer bank; upstream README states exact unmodified words from the Skribbl official word bank. Does not guarantee completeness against the current official server bank.",
+    "samples": [
+      "aardvark",
+      "abacus",
+      "abandoned",
+      "ABBA",
+      "above"
+    ]
+  },
+  {
+    "lang": "de",
+    "name": "German",
+    "skribblLanguageId": 1,
+    "entryCount": 3978,
+    "uniqueCount": 3978,
+    "source": "https://raw.githubusercontent.com/wlauyeung/Skribblio-Word-Bank/1702cddfc72eb0e38a16447365f4ad485004c235/words_de_v1.0.0_raw.json",
+    "repository": "https://github.com/wlauyeung/Skribblio-Word-Bank",
+    "revision": "1702cddfc72eb0e38a16447365f4ad485004c235",
+    "license": "MIT",
+    "licenseFile": "LICENSE-wlauyeung.txt",
+    "sha256": "f1ad39971bc4e727e4ebe1df2907767b396d43681e3ff4feaeb9a4585979b6a5",
+    "provenance": "Community Skribbl answer bank; upstream README states exact unmodified words from the Skribbl official word bank. Does not guarantee completeness against the current official server bank.",
+    "samples": [
+      "3D-Drucker",
+      "Aal",
+      "Aasfresser",
+      "ABBA",
+      "Abend"
+    ]
+  },
+  {
+    "lang": "fr",
+    "name": "French",
+    "skribblLanguageId": 7,
+    "entryCount": 3788,
+    "uniqueCount": 3788,
+    "source": "https://raw.githubusercontent.com/wlauyeung/Skribblio-Word-Bank/1702cddfc72eb0e38a16447365f4ad485004c235/words_fr_v1.0.0_raw.json",
+    "repository": "https://github.com/wlauyeung/Skribblio-Word-Bank",
+    "revision": "1702cddfc72eb0e38a16447365f4ad485004c235",
+    "license": "MIT",
+    "licenseFile": "LICENSE-wlauyeung.txt",
+    "sha256": "0f63ffb1922355d4f560172d61b97a5406e37391e196ce24c48b5d4c2c5e3274",
+    "provenance": "Community Skribbl answer bank; upstream README states exact unmodified words from the Skribbl official word bank. Does not guarantee completeness against the current official server bank.",
+    "samples": [
+      "9gag",
+      "à l'envers",
+      "à l'étage",
+      "à l'extérieur",
+      "à l'intérieur"
+    ]
+  },
+  {
+    "lang": "ko",
+    "name": "Korean",
+    "skribblLanguageId": 14,
+    "entryCount": 2248,
+    "uniqueCount": 2248,
+    "source": "https://raw.githubusercontent.com/wlauyeung/Skribblio-Word-Bank/1702cddfc72eb0e38a16447365f4ad485004c235/words_kr_v1.0.0_raw.json",
+    "repository": "https://github.com/wlauyeung/Skribblio-Word-Bank",
+    "revision": "1702cddfc72eb0e38a16447365f4ad485004c235",
+    "license": "MIT",
+    "licenseFile": "LICENSE-wlauyeung.txt",
+    "sha256": "da04247c0234e58cf219f215eb25640f52a0237958c4ff5eb3d4fe007fc105c7",
+    "provenance": "Community Skribbl answer bank; upstream README states exact unmodified words from the Skribbl official word bank. Does not guarantee completeness against the current official server bank.",
+    "samples": [
+      "엉덩이",
+      "잠수함",
+      "감자튀김",
+      "결투",
+      "귀여운"
+    ]
+  },
+  {
+    "lang": "es",
+    "name": "Spanish",
+    "skribblLanguageId": 24,
+    "entryCount": 2338,
+    "uniqueCount": 2338,
+    "source": "https://raw.githubusercontent.com/wlauyeung/Skribblio-Word-Bank/1702cddfc72eb0e38a16447365f4ad485004c235/words_es_v1.0.0_raw.json",
+    "repository": "https://github.com/wlauyeung/Skribblio-Word-Bank",
+    "revision": "1702cddfc72eb0e38a16447365f4ad485004c235",
+    "license": "MIT",
+    "licenseFile": "LICENSE-wlauyeung.txt",
+    "sha256": "b4a8920019d96d6a5f2459439d15cf6a34271f81fc2b045531794506fa2de117",
+    "provenance": "Community Skribbl answer bank; upstream README states exact unmodified words from the Skribbl official word bank. Does not guarantee completeness against the current official server bank.",
+    "samples": [
+      "a prueba de fuego",
+      "abajo",
+      "abba",
+      "abedul",
+      "abeja"
+    ]
+  }
+]

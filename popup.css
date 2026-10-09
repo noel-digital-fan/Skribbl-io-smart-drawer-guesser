@@ -1,112 +1,52 @@
-:root {
-  color-scheme: dark;
-  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
-}
-
+:root { color-scheme: light; font: 12px/1.5 "Trebuchet MS", "Segoe UI", system-ui, sans-serif; color: #23395d; background: #28569a; }
 * { box-sizing: border-box; }
-
-body {
-  width: 300px;
-  margin: 0;
-  color: #f4f7ff;
-  background: #09152b;
-}
-
-.popup-shell {
-  padding: 14px;
-  background:
-    radial-gradient(circle at 100% 0, rgba(83, 90, 213, .24), transparent 42%),
-    linear-gradient(145deg, #122545, #09152b 72%);
-}
-
-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-header img {
-  border-radius: 9px;
-  box-shadow: 0 7px 16px rgba(0, 0, 0, .25);
-}
-
-header div { min-width: 0; flex: 1; }
-h1 { margin: 0 0 2px; font-size: 14px; font-weight: 700; }
-header p { margin: 0; color: #91a3c4; font-size: 11px; }
-
-.version-badge {
-  padding: 4px 7px;
-  color: #a9f0ca;
-  background: rgba(19, 142, 91, .2);
-  border: 1px solid rgba(58, 210, 137, .24);
-  border-radius: 999px;
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.update-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 66px;
-  padding: 11px;
-  background: rgba(255, 255, 255, .065);
-  border: 1px solid rgba(164, 194, 255, .16);
-  border-radius: 12px;
-  box-shadow: 0 8px 22px rgba(0, 5, 19, .2), inset 0 1px rgba(255, 255, 255, .06);
-}
-
-.status-icon {
-  display: grid;
-  place-items: center;
-  flex: 0 0 32px;
-  height: 32px;
-  color: #a9f0ca;
-  background: rgba(19, 142, 91, .2);
-  border: 1px solid rgba(58, 210, 137, .24);
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.status-copy { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+[hidden] { display: none !important; }
+body { width: 360px; margin: 0; }
+.popup-shell { padding: 0 18px 16px; background: #28569a url("assets/doodle-blue.png") center top / 420px auto repeat; }
+header { display: flex; align-items: center; gap: 10px; margin: 0 -18px 18px; padding: 19px 17px; background: transparent; border-bottom: 3px solid #173e80; }
+.brand-mark { display: grid; place-items: center; flex: 0 0 42px; width: 42px; height: 42px; overflow: hidden; background: #2255a1; border: 2px solid #143c7d; border-radius: 10px 8px 11px 8px; box-shadow: 2px 3px 0 #123269; transform: rotate(-6deg); }
+.quill-icon { display: block; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+.brand-copy { flex: 1; min-width: 0; }
+h1 { margin: 0; line-height: 1; }
+.popup-shell .ssdg-wordmark { font-size: 40px; }
+.popup-shell .ssdg-wordmark-subtitle { font-size: 16px; }
+.version-badge { max-width: 74px; overflow-wrap: anywhere; padding: 4px 7px; color: #fff; background: #ffffff15; border: 1px solid #ffffff55; border-radius: 6px; font-size: 9px; font-weight: 700; }
+.launch-card { padding: 17px 16px 13px; text-align: center; background: #fff; border: 1px solid #c3d3ed; border-radius: 14px; box-shadow: 0 3px 0 #dbe5f4; }
+.launch-art { position: relative; width: 95px; height: 62px; margin: 0 auto 9px; }
+.art-paper { position: absolute; left: 22px; top: 4px; display: grid; align-content: center; gap: 6px; width: 48px; height: 51px; padding: 9px; background: #fff9df; border: 2px solid #d9bd63; border-radius: 6px; box-shadow: 3px 3px 0 #eee0b2; transform: rotate(-9deg); }
+.art-paper i { height: 3px; background: #a1bce4; border-radius: 3px; }
+.art-paper i:last-child { width: 65%; background: #91bc73; }
+.art-pencil { position: absolute; right: 4px; top: 3px; color: #2671df; font: 54px/1 "Segoe UI Symbol", sans-serif; transform: rotate(-12deg); }
+.art-star { position: absolute; left: 0; top: 0; color: #e6aa29; font-size: 23px; }
+h2 { margin: 0; font-size: 18px; letter-spacing: -.4px; }
+.launch-card > p { margin: 7px 0 14px; color: #536b8e; font-size: 11px; }
+.launch-note { display: block; margin-top: 11px; color: #536b8e; font-size: 9px; }
+.primary-button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 37px; margin-top: 10px; padding: 8px 12px; color: #244b85; background: #fff; border: 1px solid #9db7dd; border-radius: 8px; box-shadow: 0 3px 0 #c3d3ed; font: 700 11px/1.35 "Trebuchet MS", "Segoe UI", sans-serif; cursor: pointer; transition: background-color 140ms ease, box-shadow 140ms ease; }
+.primary-button:hover:not(:disabled) { background: #e5efff; border-color: #5882c4; }
+.primary-button:active:not(:disabled) { box-shadow: none; }
+.primary-button:focus-visible { outline: 3px solid #174ba0; outline-offset: 3px; }
+.primary-button:disabled { cursor: wait; opacity: .55; }
+#restore-menu { min-height: 44px; color: #fff; background: #27854d; border: 2px solid #1d623b; box-shadow: 0 4px 0 #1d623b; font-size: 14px; }
+#restore-menu:hover:not(:disabled) { background: #217342; }
+#restore-menu:active:not(:disabled) { box-shadow: none; }
+#restore-menu span { font-size: 18px; }
+.section-label { margin: 23px 0 8px; color: #fff; text-shadow: 0 1px 2px #123269; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.update-card { display: flex; align-items: center; gap: 10px; min-height: 78px; padding: 12px; background: #fff; border: 1px solid #c3d3ed; border-radius: 10px; }
+.status-icon { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 32px; color: #28623c; background: #e4f4dd; border: 1px solid #a5c993; border-radius: 10px 8px 11px 7px; font: 700 18px/1 "Segoe UI Symbol", sans-serif; }
+.status-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .status-copy strong { font-size: 12px; }
-.status-copy span { color: #aab8d1; font-size: 10.5px; line-height: 1.35; }
-
-.primary-button {
-  width: 100%;
-  height: 36px;
-  margin-top: 10px;
-  color: #fff;
-  background: linear-gradient(145deg, #5964dc, #3940a2);
-  border: 1px solid rgba(165, 174, 255, .45);
-  border-radius: 10px;
-  box-shadow: 0 8px 18px rgba(31, 36, 125, .28), inset 0 1px rgba(255, 255, 255, .13);
-  font: 650 11px "Segoe UI Variable", "Segoe UI", sans-serif;
-  cursor: pointer;
-}
-
-.primary-button:hover { filter: brightness(1.12); }
-.primary-button:active { transform: scale(.99); }
-.primary-button:disabled { cursor: wait; opacity: .7; }
-
-.store-note {
-  margin: 9px 4px 0;
-  color: #7385a8;
-  font-size: 9.5px;
-  line-height: 1.35;
-  text-align: center;
-}
-
-.update-ready .status-icon {
-  color: #fff1b0;
-  background: rgba(194, 132, 24, .2);
-  border-color: rgba(242, 187, 63, .28);
-}
-
-.update-ready .version-badge {
-  color: #fff1b0;
-  background: rgba(194, 132, 24, .2);
-  border-color: rgba(242, 187, 63, .28);
+.status-copy span { color: #536b8e; font-size: 10px; line-height: 1.5; }
+#button-icon { font-family: "Segoe UI Symbol", sans-serif; font-size: 16px; }
+.popup-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 19px; padding-top: 12px; border-top: 1px dashed #91b1e1; color: #edf4ff; font-size: 10px; }
+.popup-footer strong { color: #fff; }
+.store-note { margin: 8px 0 0; color: #edf4ff; font-size: 9px; line-height: 1.6; }
+#panel-message { padding: 9px; color: #244b85; background: #edf4ff; border: 1px solid #c3d3ed; border-radius: 7px; text-align: left; }
+.update-ready .status-icon { color: #765727; background: #fff4da; border-color: #d9bd63; }
+.update-ready .version-badge { color: #5e481e; background: #ffe18b; border-color: #d9bd63; }
+.update-ready #check-update { color: #fff; background: #2671df; border-color: #1654ad; box-shadow: 0 3px 0 #1654ad; }
+@keyframes ssdg-popup-enter { from { opacity: 0; translate: 0 4px; } to { opacity: 1; translate: 0 0; } }
+@media (prefers-reduced-motion: no-preference) { .launch-card { animation: ssdg-popup-enter 180ms ease-out; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media (forced-colors: active) {
+  .primary-button, #restore-menu { border-color: ButtonText; }
 }

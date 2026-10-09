@@ -1,0 +1,1087 @@
+{
+  "date": "2026-10-04",
+  "startedAtUtc": "2026-10-04T22:47:08.902Z",
+  "language": 3,
+  "method": "Native page UI; login-only emitter guard; same browser/network; four maximum sessions; no retries",
+  "sessions": [
+    {
+      "label": "public-primary",
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/",
+          "type": "Document",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "time": 65419.601533,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/socket.io.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65420.416799,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "referer": "https://skribbl.io/",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "content-type": "application/javascript; charset=UTF-8",
+            "server": "nginx/1.30.1"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/game.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65420.416904,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "referer": "https://skribbl.io/",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "content-type": "application/javascript; charset=UTF-8",
+            "server": "nginx/1.30.1"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "https://skribbl.io/api/play",
+          "type": "XHR",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65423.089285,
+          "body": "lang=3",
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "content-type": "application/x-www-form-urlencoded",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "origin": "https://skribbl.io/",
+            "referer": "https://skribbl.io/",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "access-control-allow-origin": "*",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          },
+          "responseBody": "https://server3.skribbl.io:5005/"
+        }
+      ],
+      "websocketEvents": [
+        {
+          "type": "created",
+          "id": "9616.150",
+          "url": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket"
+        },
+        {
+          "type": "handshake-request",
+          "id": "9616.150",
+          "time": 65424.687407,
+          "headers": {
+            "upgrade": "websocket",
+            "origin": "https://skribbl.io/",
+            "connection": "Upgrade",
+            "sec-websocket-key": "[fresh handshake value omitted]",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-websocket-version": "13"
+          }
+        },
+        {
+          "type": "handshake-response",
+          "id": "9616.150",
+          "time": 65424.83924,
+          "status": 101,
+          "headers": {
+            "upgrade": "websocket",
+            "access-control-allow-origin": "https://server3.skribbl.io",
+            "sec-websocket-accept": "[fresh handshake value omitted]",
+            "server": "nginx/1.30.1",
+            "connection": "upgrade"
+          }
+        },
+        {
+          "type": "received",
+          "id": "9616.150",
+          "time": 65424.839862,
+          "text": "0{\"sid\":\"engine-1\",\"upgrades\":[],\"pingInterval\":5000,\"pingTimeout\":20000,\"maxPayload\":81920}"
+        },
+        {
+          "type": "sent",
+          "id": "9616.150",
+          "time": 65424.840491,
+          "text": "40"
+        },
+        {
+          "type": "received",
+          "id": "9616.150",
+          "time": 65424.985332,
+          "text": "40{\"sid\":\"socket-1\"}"
+        },
+        {
+          "type": "sent",
+          "id": "9616.150",
+          "time": 65424.986509,
+          "text": "42[\"login\",{\"join\":\"\",\"create\":0,\"name\":\"Research Alpha\",\"lang\":\"3\",\"avatar\":[4,15,31,-1]}]"
+        },
+        {
+          "type": "received",
+          "id": "9616.150",
+          "time": 65425.135341,
+          "text": "42[\"data\",{\"id\":10,\"data\":{\"id\":\"room-1\",\"roomShape\":{\"length\":8,\"alphanumeric\":true,\"trailingDigits\":0},\"type\":0,\"me\":0,\"owner\":-1,\"settings\":[3,8,80,3,3,2,0,0],\"users\":[{\"id\":0,\"flags\":0}]}}]",
+          "reduced": true
+        },
+        {
+          "type": "received",
+          "id": "9616.150",
+          "time": 65429.868963,
+          "text": "2"
+        },
+        {
+          "type": "sent",
+          "id": "9616.150",
+          "time": 65429.869128,
+          "text": "3"
+        },
+        {
+          "type": "received",
+          "id": "9616.150",
+          "time": 65435.090842,
+          "text": "2"
+        },
+        {
+          "type": "sent",
+          "id": "9616.150",
+          "time": 65435.090966,
+          "text": "3"
+        },
+        {
+          "type": "received",
+          "id": "9616.150",
+          "time": 65440.239695,
+          "text": "2"
+        },
+        {
+          "type": "sent",
+          "id": "9616.150",
+          "time": 65440.239791,
+          "text": "3"
+        },
+        {
+          "type": "sent",
+          "id": "9616.150",
+          "time": 65440.730021,
+          "text": "41"
+        },
+        {
+          "type": "closed",
+          "id": "9616.150",
+          "time": 65440.878209
+        }
+      ],
+      "errors": [],
+      "blockedApplicationEmissions": []
+    },
+    {
+      "label": "public-invitation",
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/?room-1",
+          "type": "Document",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "time": 65437.774459,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/socket.io.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/?room-1",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65438.334555,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "referer": "https://skribbl.io/?room-1",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "server": "nginx/1.30.1",
+            "content-type": "application/javascript; charset=UTF-8"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/game.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/?room-1",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65438.334603,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "referer": "https://skribbl.io/?room-1",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "server": "nginx/1.30.1",
+            "content-type": "application/javascript; charset=UTF-8"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "https://skribbl.io/api/play",
+          "type": "XHR",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/?room-1",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65439.298976,
+          "body": "id=room-1",
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "content-type": "application/x-www-form-urlencoded",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "origin": "https://skribbl.io/",
+            "referer": "https://skribbl.io/?room-1",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "access-control-allow-origin": "*",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          },
+          "responseBody": "https://server3.skribbl.io:5005/"
+        }
+      ],
+      "websocketEvents": [
+        {
+          "type": "created",
+          "id": "18872.140",
+          "url": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket"
+        },
+        {
+          "type": "handshake-request",
+          "id": "18872.140",
+          "time": 65440.087547,
+          "headers": {
+            "upgrade": "websocket",
+            "origin": "https://skribbl.io/",
+            "connection": "Upgrade",
+            "sec-websocket-key": "[fresh handshake value omitted]",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-websocket-version": "13"
+          }
+        },
+        {
+          "type": "handshake-response",
+          "id": "18872.140",
+          "time": 65440.239453,
+          "status": 101,
+          "headers": {
+            "upgrade": "websocket",
+            "access-control-allow-origin": "https://server3.skribbl.io",
+            "sec-websocket-accept": "[fresh handshake value omitted]",
+            "server": "nginx/1.30.1",
+            "connection": "upgrade"
+          }
+        },
+        {
+          "type": "received",
+          "id": "18872.140",
+          "time": 65440.239719,
+          "text": "0{\"sid\":\"engine-2\",\"upgrades\":[],\"pingInterval\":5000,\"pingTimeout\":20000,\"maxPayload\":81920}"
+        },
+        {
+          "type": "sent",
+          "id": "18872.140",
+          "time": 65440.239954,
+          "text": "40"
+        },
+        {
+          "type": "received",
+          "id": "18872.140",
+          "time": 65440.404955,
+          "text": "40{\"sid\":\"socket-2\"}"
+        },
+        {
+          "type": "sent",
+          "id": "18872.140",
+          "time": 65440.405592,
+          "text": "42[\"login\",{\"join\":\"room-1\",\"create\":0,\"name\":\"Research Beta\",\"lang\":\"3\",\"avatar\":[12,16,33,-1]}]"
+        },
+        {
+          "type": "received",
+          "id": "18872.140",
+          "time": 65440.62042,
+          "text": "42[\"joinerr\",100]"
+        },
+        {
+          "type": "sent",
+          "id": "18872.140",
+          "time": 65440.620897,
+          "text": "41"
+        },
+        {
+          "type": "received",
+          "id": "18872.140",
+          "time": 65440.623173,
+          "text": "41"
+        },
+        {
+          "type": "closed",
+          "id": "18872.140",
+          "time": 65440.853983
+        }
+      ],
+      "errors": [],
+      "blockedApplicationEmissions": []
+    },
+    {
+      "label": "private-create",
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/",
+          "type": "Document",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "time": 65453.329089,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/socket.io.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65453.556694,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "referer": "https://skribbl.io/",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "server": "nginx/1.30.1",
+            "content-type": "application/javascript; charset=UTF-8"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/game.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65453.556781,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "referer": "https://skribbl.io/",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "server": "nginx/1.30.1",
+            "content-type": "application/javascript; charset=UTF-8"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "https://skribbl.io/api/play",
+          "type": "XHR",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65454.352424,
+          "body": "lang=3",
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "content-type": "application/x-www-form-urlencoded",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "origin": "https://skribbl.io/",
+            "referer": "https://skribbl.io/",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "access-control-allow-origin": "*",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          },
+          "responseBody": "https://server3.skribbl.io:5005/"
+        }
+      ],
+      "websocketEvents": [
+        {
+          "type": "created",
+          "id": "14164.140",
+          "url": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket"
+        },
+        {
+          "type": "handshake-request",
+          "id": "14164.140",
+          "time": 65455.076516,
+          "headers": {
+            "upgrade": "websocket",
+            "origin": "https://skribbl.io/",
+            "connection": "Upgrade",
+            "sec-websocket-key": "[fresh handshake value omitted]",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-websocket-version": "13"
+          }
+        },
+        {
+          "type": "handshake-response",
+          "id": "14164.140",
+          "time": 65455.273347,
+          "status": 101,
+          "headers": {
+            "upgrade": "websocket",
+            "access-control-allow-origin": "https://server3.skribbl.io",
+            "sec-websocket-accept": "[fresh handshake value omitted]",
+            "server": "nginx/1.30.1",
+            "connection": "upgrade"
+          }
+        },
+        {
+          "type": "received",
+          "id": "14164.140",
+          "time": 65455.275209,
+          "text": "0{\"sid\":\"engine-3\",\"upgrades\":[],\"pingInterval\":5000,\"pingTimeout\":20000,\"maxPayload\":81920}"
+        },
+        {
+          "type": "sent",
+          "id": "14164.140",
+          "time": 65455.275606,
+          "text": "40"
+        },
+        {
+          "type": "received",
+          "id": "14164.140",
+          "time": 65455.44147,
+          "text": "40{\"sid\":\"socket-3\"}"
+        },
+        {
+          "type": "sent",
+          "id": "14164.140",
+          "time": 65455.44205,
+          "text": "42[\"login\",{\"join\":\"room-2\",\"create\":1,\"name\":\"Research Owner\",\"lang\":\"3\",\"avatar\":[15,26,15,-1]}]"
+        },
+        {
+          "type": "received",
+          "id": "14164.140",
+          "time": 65455.623042,
+          "text": "42[\"data\",{\"id\":10,\"data\":{\"id\":\"room-3\",\"roomShape\":{\"length\":8,\"alphanumeric\":true,\"trailingDigits\":0},\"type\":1,\"me\":0,\"owner\":0,\"settings\":[3,8,80,3,3,2,0,0],\"users\":[{\"id\":0,\"flags\":0}]}}]",
+          "reduced": true
+        },
+        {
+          "type": "received",
+          "id": "14164.140",
+          "time": 65460.281861,
+          "text": "2"
+        },
+        {
+          "type": "sent",
+          "id": "14164.140",
+          "time": 65460.282017,
+          "text": "3"
+        },
+        {
+          "type": "received",
+          "id": "14164.140",
+          "time": 65465.503663,
+          "text": "2"
+        },
+        {
+          "type": "sent",
+          "id": "14164.140",
+          "time": 65465.503814,
+          "text": "3"
+        },
+        {
+          "type": "received",
+          "id": "14164.140",
+          "time": 65470.726221,
+          "text": "2"
+        },
+        {
+          "type": "sent",
+          "id": "14164.140",
+          "time": 65470.726341,
+          "text": "3"
+        },
+        {
+          "type": "sent",
+          "id": "14164.140",
+          "time": 65471.027102,
+          "text": "41"
+        }
+      ],
+      "errors": [],
+      "blockedApplicationEmissions": []
+    },
+    {
+      "label": "private-invitation",
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/?room-3",
+          "type": "Document",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "time": 65468.262742,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/socket.io.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/?room-3",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65468.592687,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "referer": "https://skribbl.io/?room-3",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "server": "nginx/1.30.1",
+            "content-type": "application/javascript; charset=UTF-8"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "https://skribbl.io/js/game.js",
+          "type": "Script",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/?room-3",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65468.592744,
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "referer": "https://skribbl.io/?room-3",
+            "sec-fetch-dest": "script",
+            "sec-fetch-mode": "no-cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "server": "nginx/1.30.1",
+            "content-type": "application/javascript; charset=UTF-8"
+          }
+        },
+        {
+          "method": "POST",
+          "url": "https://skribbl.io/api/play",
+          "type": "XHR",
+          "headers": {
+            "sec-ch-ua-platform": "\"Windows\"",
+            "referer": "https://skribbl.io/?room-3",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "content-type": "application/x-www-form-urlencoded",
+            "sec-ch-ua-mobile": "?0"
+          },
+          "time": 65469.437876,
+          "body": "id=room-3",
+          "wireHeaders": {
+            "connection": "keep-alive",
+            "content-type": "application/x-www-form-urlencoded",
+            "cookie": {
+              "present": true,
+              "values": "omitted"
+            },
+            "origin": "https://skribbl.io/",
+            "referer": "https://skribbl.io/?room-3",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-ch-ua": "\"Chromium\";v=\"154\", \"Microsoft Edge\";v=\"154\", \"Not A(Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\""
+          },
+          "status": 200,
+          "responseHeaders": {
+            "connection": "keep-alive",
+            "access-control-allow-origin": "*",
+            "content-type": "text/html; charset=utf-8",
+            "server": "nginx/1.30.1"
+          },
+          "responseBody": "https://server3.skribbl.io:5005/"
+        }
+      ],
+      "websocketEvents": [
+        {
+          "type": "created",
+          "id": "18028.143",
+          "url": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket"
+        },
+        {
+          "type": "handshake-request",
+          "id": "18028.143",
+          "time": 65470.318,
+          "headers": {
+            "upgrade": "websocket",
+            "origin": "https://skribbl.io/",
+            "connection": "Upgrade",
+            "sec-websocket-key": "[fresh handshake value omitted]",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+            "sec-websocket-version": "13"
+          }
+        },
+        {
+          "type": "handshake-response",
+          "id": "18028.143",
+          "time": 65470.521703,
+          "status": 101,
+          "headers": {
+            "upgrade": "websocket",
+            "access-control-allow-origin": "https://server3.skribbl.io",
+            "sec-websocket-accept": "[fresh handshake value omitted]",
+            "server": "nginx/1.30.1",
+            "connection": "upgrade"
+          }
+        },
+        {
+          "type": "received",
+          "id": "18028.143",
+          "time": 65470.522001,
+          "text": "0{\"sid\":\"engine-4\",\"upgrades\":[],\"pingInterval\":5000,\"pingTimeout\":20000,\"maxPayload\":81920}"
+        },
+        {
+          "type": "sent",
+          "id": "18028.143",
+          "time": 65470.522298,
+          "text": "40"
+        },
+        {
+          "type": "received",
+          "id": "18028.143",
+          "time": 65470.726158,
+          "text": "40{\"sid\":\"socket-4\"}"
+        },
+        {
+          "type": "sent",
+          "id": "18028.143",
+          "time": 65470.72679,
+          "text": "42[\"login\",{\"join\":\"room-3\",\"create\":0,\"name\":\"Research Guest\",\"lang\":\"3\",\"avatar\":[23,17,37,-1]}]"
+        },
+        {
+          "type": "received",
+          "id": "18028.143",
+          "time": 65470.920108,
+          "text": "42[\"data\",{\"id\":10,\"data\":{\"id\":\"room-3\",\"roomShape\":{\"length\":8,\"alphanumeric\":true,\"trailingDigits\":0},\"type\":1,\"me\":1,\"owner\":0,\"settings\":[3,8,80,3,3,2,0,0],\"users\":[{\"id\":0,\"flags\":0},{\"id\":1,\"flags\":0}]}}]",
+          "reduced": true
+        },
+        {
+          "type": "sent",
+          "id": "18028.143",
+          "time": 65471.022996,
+          "text": "41"
+        }
+      ],
+      "errors": [],
+      "blockedApplicationEmissions": []
+    }
+  ],
+  "results": {
+    "publicPrimary": {
+      "outcome": {
+        "joined": true
+      },
+      "room": "room-1",
+      "type": 0,
+      "me": 0,
+      "owner": -1,
+      "capacity": 8,
+      "occupied": 1,
+      "uri": "https://server3.skribbl.io",
+      "path": "/5005/",
+      "socketId": "socket-1",
+      "engineId": "engine-1",
+      "login": {
+        "join": "",
+        "create": 0,
+        "name": "Research Alpha",
+        "lang": "3",
+        "avatar": [
+          4,
+          15,
+          31,
+          -1
+        ]
+      },
+      "connected": true,
+      "roomShape": {
+        "length": 8,
+        "alphanumeric": true,
+        "trailingDigits": 0
+      }
+    },
+    "publicBeforeInvite": {
+      "occupied": 1,
+      "capacity": 8,
+      "connected": true
+    },
+    "publicInvite": {
+      "outcome": {
+        "joinerr": 100
+      },
+      "capacity": null,
+      "occupied": 0,
+      "uri": "https://server3.skribbl.io",
+      "path": "/5005/",
+      "socketId": "socket-2",
+      "engineId": "engine-2",
+      "login": {
+        "join": "room-1",
+        "create": 0,
+        "name": "Research Beta",
+        "lang": "3",
+        "avatar": [
+          12,
+          16,
+          33,
+          -1
+        ]
+      },
+      "connected": false
+    },
+    "publicDistinctEngineSessions": true,
+    "publicDistinctSocketSessions": true,
+    "privatePrimary": {
+      "outcome": {
+        "joined": true
+      },
+      "room": "room-3",
+      "type": 1,
+      "me": 0,
+      "owner": 0,
+      "capacity": 8,
+      "occupied": 1,
+      "uri": "https://server3.skribbl.io",
+      "path": "/5005/",
+      "socketId": "socket-3",
+      "engineId": "engine-3",
+      "login": {
+        "join": "room-2",
+        "create": 1,
+        "name": "Research Owner",
+        "lang": "3",
+        "avatar": [
+          15,
+          26,
+          15,
+          -1
+        ]
+      },
+      "connected": true,
+      "roomShape": {
+        "length": 8,
+        "alphanumeric": true,
+        "trailingDigits": 0
+      }
+    },
+    "privateInvite": {
+      "outcome": {
+        "joined": true
+      },
+      "room": "room-3",
+      "type": 1,
+      "me": 1,
+      "owner": 0,
+      "capacity": 8,
+      "occupied": 2,
+      "uri": "https://server3.skribbl.io",
+      "path": "/5005/",
+      "socketId": "socket-4",
+      "engineId": "engine-4",
+      "login": {
+        "join": "room-3",
+        "create": 0,
+        "name": "Research Guest",
+        "lang": "3",
+        "avatar": [
+          23,
+          17,
+          37,
+          -1
+        ]
+      },
+      "connected": true,
+      "roomShape": {
+        "length": 8,
+        "alphanumeric": true,
+        "trailingDigits": 0
+      }
+    },
+    "privateDistinctEngineSessions": true,
+    "privateDistinctSocketSessions": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/154.0.4258.53",
+    "revision": "@5af6e80f702cffe10645c6d6433668f011b739be",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+    "jsVersion": "15.4.11.7"
+  },
+  "finishedAtUtc": "2026-10-04T22:48:01.240Z",
+  "sentNonLoginApplicationFrames": 0
+}

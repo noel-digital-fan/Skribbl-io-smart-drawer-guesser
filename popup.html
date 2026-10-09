@@ -3,22 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Skribbl Auto Guess And Draw</title>
+  <title>Skribbl Smart Drawer/Guesser</title>
+  <link rel="stylesheet" href="branding.css">
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <main class="popup-shell">
     <header>
-      <img src="icon48.png" alt="" width="32" height="32">
-      <div>
-        <h1>Skribbl Auto Guess And Draw</h1>
-        <p>Version <span id="current-version">—</span></p>
+      <span class="brand-mark" aria-hidden="true">
+        <img class="quill-icon" src="icon48.png" width="38" height="38" alt="">
+      </span>
+      <div class="brand-copy">
+        <h1><span aria-hidden="true" class="ssdg-wordmark"><b>S</b><b>k</b><b>r</b><b>i</b><b>b</b><b>b</b><b>l</b></span><span class="ssdg-sr-only">Skribbl Smart Drawer/Guesser</span></h1>
+        <p class="ssdg-wordmark-subtitle" aria-hidden="true">Smart Drawer/Guesser</p>
       </div>
-      <span id="version-badge" class="version-badge">Current</span>
+      <span id="version-badge" class="version-badge">Installed</span>
     </header>
 
-    <section class="update-card" aria-live="polite">
-      <div class="status-icon" id="status-icon">✓</div>
+    <section class="launch-card" aria-labelledby="launch-title">
+      <div class="launch-art" aria-hidden="true"><span class="art-star">✦</span><span class="art-paper"><i></i><i></i><i></i></span><span class="art-pencil">✎</span></div>
+      <h2 id="launch-title">A little help. A lot of fun.</h2>
+      <p>Your words, brushes, and bright ideas.<br>All in one little toolbox.</p>
+      <button id="restore-menu" class="primary-button" type="button">Show menu <span aria-hidden="true">→</span></button>
+      <p id="panel-message" class="store-note" role="status" hidden></p>
+      <span class="launch-note">Open your skribbl.io tab to jump in</span>
+    </section>
+
+    <p class="section-label">Extension updates</p>
+    <section class="update-card" aria-live="polite" aria-atomic="true">
+      <div class="status-icon" id="status-icon" aria-hidden="true">↻</div>
       <div class="status-copy">
         <strong id="status-title">Ready to check</strong>
         <span id="status-message">Check whether a newer store version is available.</span>
@@ -26,11 +39,12 @@
     </section>
 
     <button id="check-update" class="primary-button" type="button">
-      <span id="button-icon">↻</span>
+      <span id="button-icon" aria-hidden="true">↻</span>
       <span id="button-label">Check for updates</span>
     </button>
 
-    <p class="store-note">Store installations also update automatically in the background.</p>
+    <div class="popup-footer"><span>Installed version</span><strong id="current-version">—</strong></div>
+    <p class="store-note">Automatic updates require a Chrome Web Store installation.</p>
   </main>
   <script src="popup.js"></script>
 </body>

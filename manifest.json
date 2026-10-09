@@ -1,44 +1,108 @@
 {
    "action": {
       "default_icon": {
-         "128": "icon128.png",
          "16": "icon16.png",
          "32": "icon32.png",
-         "48": "icon48.png"
+         "48": "icon48.png",
+         "128": "icon128.png"
       },
       "default_popup": "popup.html",
-      "default_title": "Skribbl Auto Guess And Draw"
+      "default_title": "Skribbl Smart Drawer/Guesser"
    },
    "background": {
       "service_worker": "background.js"
    },
-   "content_scripts": [ {
-      "css": [ "styles.css", "auto-draw.css" ],
-      "js": [ "content.js", "image-converter.js", "image-input.js", "auto-draw.js" ],
-      "matches": [ "*://*.skribbl.io/*", "*://skribbl.io/*" ],
-      "run_at": "document_idle"
-   }, {
-      "js": [ "draw-runner.js" ],
-      "matches": [ "*://*.skribbl.io/*", "*://skribbl.io/*" ],
-      "run_at": "document_idle",
-      "world": "MAIN"
-   } ],
-   "description": "Smart skribbl.io guesses, local word learning, and drag-and-drop Auto Draw.",
-   "host_permissions": [ "*://*.skribbl.io/*", "*://skribbl.io/*", "https://skribbl-word-sync.lakshithadil30.workers.dev/*" ],
+   "content_scripts": [
+      {
+         "css": [
+            "branding.css",
+            "styles.css",
+            "auto-draw.css",
+            "votekick.css"
+         ],
+         "js": [
+            "word-catalog.js",
+            "word-library.js",
+            "panel-window.js",
+            "content.js",
+            "ultra-optimizer.js",
+            "exact-raster-encoder.js",
+            "background-band-encoder.js",
+            "instant-planner.js",
+            "image-converter.js",
+            "image-input.js",
+            "image-adjustments.js",
+            "image-editor.js",
+            "auto-draw.js",
+            "votekick.js"
+         ],
+         "matches": [
+            "*://*.skribbl.io/*",
+            "*://skribbl.io/*"
+         ],
+         "run_at": "document_idle"
+      },
+      {
+         "js": [
+            "draw-runner.js"
+         ],
+         "matches": [
+            "*://*.skribbl.io/*",
+            "*://skribbl.io/*"
+         ],
+         "run_at": "document_idle",
+         "world": "MAIN"
+      },
+      {
+         "js": [
+            "votekick-runner.js"
+         ],
+         "matches": [
+            "*://*.skribbl.io/*",
+            "*://skribbl.io/*"
+         ],
+         "run_at": "document_start",
+         "world": "MAIN"
+      }
+   ],
+   "description": "Smart skribbl.io guesses, local word learning, and Auto Draw with image drop and clipboard paste.",
+   "host_permissions": [
+      "*://*.skribbl.io/*",
+      "*://skribbl.io/*",
+      "https://skribbl-word-sync.lakshithadil30.workers.dev/*"
+   ],
    "icons": {
-      "128": "icon128.png",
       "16": "icon16.png",
       "32": "icon32.png",
-      "48": "icon48.png"
+      "48": "icon48.png",
+      "128": "icon128.png"
    },
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5db9A4AcgkCb/Jo7SekavpUors/JijKaSGD4/0vioEhe1erkeSyRKi4VmRMHw9ct6FOg10JWhKZUdO1iGCIerNSZmKc1HJ5SKJn/1G+4hytnRdjWBJOpzOwgBfuY+Ue/N7MJQhsvLC7Gvm4DOrtiASN/1tLeB8rq7JP7Jb1wptLdHl6otFAahfKVT/yEqzE3VXi+DwfVYVO6V3Wt0Yx91TN8LCGzr87hLyikYeE/vStDsXKZ0tfSpCsJATlCVdD8VP4qaXVbfZbkozKFq6/yMRCgl0v83L1VwI4GZMYfd7IXktamd7+n1gUeyZxsmGS72wuiHEm5DIhS+106abmcMwIDAQAB",
    "manifest_version": 3,
-   "name": "Skribbl Auto Guess And Draw",
-   "permissions": [ "storage" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.2.5",
-   "web_accessible_resources": [ {
-      "matches": [ "*://*.skribbl.io/*", "*://skribbl.io/*" ],
-      "resources": [ "words.txt", "icon48.png" ]
-   } ]
+   "name": "Skribbl Smart Drawer/Guesser",
+   "permissions": [
+      "storage",
+      "clipboardRead"
+   ],
+   "version": "1.0",
+   "web_accessible_resources": [
+      {
+         "matches": [
+            "*://*.skribbl.io/*",
+            "*://skribbl.io/*"
+         ],
+         "resources": [
+            "words.txt",
+            "words-de.txt",
+            "words-fr.txt",
+            "words-ko.txt",
+            "words-pl.txt",
+            "words-es.txt",
+            "icon48.png",
+            "assets/doodle-blue.png",
+            "assets/fonts/PixelifySans.ttf"
+         ]
+      }
+   ],
+   "short_name": "Skribbl Smart",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoMtZY3OFoPim581ePmKytspj9uxSaGOzks0Aq7pBO5pqjBcsnP3N56CAvREETKwZad9ThgaS7xo7MjrmKsl7psz9oHCpITHzGwJ2zuRYvOWuFQaZuE5JWY6uCmXkr4Yq80hzFDrGaJUFpSbUX+SmZRDDCukRMiRhDdxVWtDJDqcjWKNMapd5oZgzARdlCKFZ6+YnTUFomAGzZNA597RWHN8Iujm/yBwOkAwlf5CnZnr7LgZ//zt7JzTSf7kVCfu5+XymRcAXbgkzk3aw7X3cQiZAnVwD9yWvOdEqYnuSGlVobtomd4bvEXhxRcz8+KBVdPCKoq9TA6k9/afqXvUlHwIDAQAB"
 }

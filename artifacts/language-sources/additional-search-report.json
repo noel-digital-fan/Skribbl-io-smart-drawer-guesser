@@ -1,0 +1,84 @@
+{
+  "checkedOn": "2026-10-03",
+  "additionalAcceptedLanguages": [
+    "pl"
+  ],
+  "acceptedSource": {
+    "repository": "ErenoGit/SkribblHelperPL",
+    "license": "MPL-2.0",
+    "commit": "00c12f302ce74c1dc520b3a0a7b586928c2b38d8",
+    "words": 2238,
+    "normalizedUniqueWords": 2237,
+    "localData": "pl.txt",
+    "localMetadata": "pl-source.json"
+  },
+  "unavailableLanguages": [
+    "bg",
+    "cs",
+    "da",
+    "nl",
+    "fi",
+    "et",
+    "el",
+    "he",
+    "hu",
+    "it",
+    "ja",
+    "lv",
+    "mk",
+    "no",
+    "pt",
+    "ro",
+    "ru",
+    "sr",
+    "sk",
+    "sv",
+    "tl",
+    "tr"
+  ],
+  "skippedCandidates": [
+    {
+      "repository": "Godwhitelight/skribbl-wordlist",
+      "languages": [
+        "bg",
+        "cs",
+        "da",
+        "he"
+      ],
+      "reason": "No license or word acquisition/source provenance stated in repository."
+    },
+    {
+      "repository": "Are-You-a-Person/skribbl-word-bank",
+      "reason": "Licensed, credible collection, but English only; existing English bank retained."
+    },
+    {
+      "repository": "herobrine0003/Skribbl-Wordlist",
+      "reason": "Single English list, no additional language."
+    },
+    {
+      "repository": "dokick/wordlist",
+      "reason": "Custom themed word packs, not documented Skribbl default banks."
+    },
+    {
+      "repository": "thepapanoob/skribblio-helper",
+      "reason": "English-only wordlist; also inspected by other agent."
+    },
+    {
+      "repository": "rosslh/skribbler",
+      "reason": "No packaged additional language banks; also inspected by other agent."
+    },
+    {
+      "repository": "MernGG/SkribblWordlist",
+      "reason": "Single list without additional-language metadata."
+    },
+    {
+      "repository": "natganleaguealt2/skribblwordlist",
+      "reason": "Single list without additional-language metadata."
+    },
+    {
+      "repository": "souis-cell/skribbl-wordlist",
+      "reason": "Single list without additional-language metadata."
+    }
+  ],
+  "scope": "Bounded public primary repository/API research. No live game bots or scraping; no arbitrary translations, generic dictionaries, or custom packs substituted."
+}

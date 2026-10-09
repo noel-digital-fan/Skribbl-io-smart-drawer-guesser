@@ -1,0 +1,176 @@
+{
+  "verifiedOffline": true,
+  "realSocketIoManagersDistinct": true,
+  "networkOpenedByVerification": false,
+  "capturedGameConnections": 4,
+  "capturedApplicationLogins": 4,
+  "capturedOtherApplicationEmissions": 0,
+  "guardBlockedApplicationEmissions": 0,
+  "comparisons": [
+    {
+      "label": "public-primary",
+      "httpStatus": 200,
+      "body": "lang=3",
+      "returnedEndpoint": "https://server3.skribbl.io:5005/",
+      "websocket": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket",
+      "upgradeStatus": 101,
+      "engineId": "engine-1",
+      "socketId": "socket-1",
+      "pingInterval": 5000,
+      "pingTimeout": 20000,
+      "maxPayload": 81920,
+      "cookieOnLookup": true,
+      "lookupWireHeadersAvailable": true,
+      "cookieOnWebSocket": false,
+      "result": {
+        "joined": true,
+        "type": 0,
+        "room": "room-1",
+        "me": 0,
+        "owner": -1,
+        "capacity": 8,
+        "occupied": 1
+      },
+      "timeLoginToAdmissionMs": 149
+    },
+    {
+      "label": "public-invitation",
+      "httpStatus": 200,
+      "body": "id=room-1",
+      "returnedEndpoint": "https://server3.skribbl.io:5005/",
+      "websocket": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket",
+      "upgradeStatus": 101,
+      "engineId": "engine-2",
+      "socketId": "socket-2",
+      "pingInterval": 5000,
+      "pingTimeout": 20000,
+      "maxPayload": 81920,
+      "cookieOnLookup": true,
+      "lookupWireHeadersAvailable": true,
+      "cookieOnWebSocket": false,
+      "result": {
+        "joinerr": 100
+      },
+      "timeLoginToAdmissionMs": 215
+    },
+    {
+      "label": "private-create",
+      "httpStatus": 200,
+      "body": "lang=3",
+      "returnedEndpoint": "https://server3.skribbl.io:5005/",
+      "websocket": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket",
+      "upgradeStatus": 101,
+      "engineId": "engine-3",
+      "socketId": "socket-3",
+      "pingInterval": 5000,
+      "pingTimeout": 20000,
+      "maxPayload": 81920,
+      "cookieOnLookup": true,
+      "lookupWireHeadersAvailable": true,
+      "cookieOnWebSocket": false,
+      "result": {
+        "joined": true,
+        "type": 1,
+        "room": "room-3",
+        "me": 0,
+        "owner": 0,
+        "capacity": 8,
+        "occupied": 1
+      },
+      "timeLoginToAdmissionMs": 181
+    },
+    {
+      "label": "private-invitation",
+      "httpStatus": 200,
+      "body": "id=room-3",
+      "returnedEndpoint": "https://server3.skribbl.io:5005/",
+      "websocket": "wss://server3.skribbl.io/5005/?EIO=4&transport=websocket",
+      "upgradeStatus": 101,
+      "engineId": "engine-4",
+      "socketId": "socket-4",
+      "pingInterval": 5000,
+      "pingTimeout": 20000,
+      "maxPayload": 81920,
+      "cookieOnLookup": true,
+      "lookupWireHeadersAvailable": true,
+      "cookieOnWebSocket": false,
+      "result": {
+        "joined": true,
+        "type": 1,
+        "room": "room-3",
+        "me": 1,
+        "owner": 0,
+        "capacity": 8,
+        "occupied": 2
+      },
+      "timeLoginToAdmissionMs": 193
+    }
+  ],
+  "normalizedSessionFrame": {
+    "public-primary": {
+      "login": {
+        "join": "",
+        "create": 0,
+        "name": "Research Alpha",
+        "lang": "3",
+        "avatar": [
+          4,
+          15,
+          31,
+          -1
+        ]
+      }
+    },
+    "public-invitation": {
+      "login": {
+        "join": "room-1",
+        "create": 0,
+        "name": "Research Beta",
+        "lang": "3",
+        "avatar": [
+          12,
+          16,
+          33,
+          -1
+        ]
+      }
+    },
+    "private-create": {
+      "login": {
+        "join": 0,
+        "create": 1,
+        "name": "Research Owner",
+        "lang": "3",
+        "avatar": [
+          15,
+          26,
+          15,
+          -1
+        ]
+      },
+      "creationJoinNote": "Collector's original alias() erroneously aliased numeric zero. Canonical numeric 0 is recovered from the inspected native creation call; original sanitized capture is unchanged."
+    },
+    "private-invitation": {
+      "login": {
+        "join": "room-3",
+        "create": 0,
+        "name": "Research Guest",
+        "lang": "3",
+        "avatar": [
+          23,
+          17,
+          37,
+          -1
+        ]
+      }
+    }
+  },
+  "collectorLimitations": [
+    "Original collector captured selected HTTP headers and standard unnamespaced Socket.IO application frames, not all browser traffic.",
+    "Original source had no WebSocket allowlist, but all four recorded sockets were checked as first-party game connections.",
+    "Original source relied on the native client's disconnect handling; retained trace verifies exactly four distinct game connections and one login each.",
+    "Original source aliased numeric creation join 0 as a room string; native source confirms numeric 0. Corrected collector preserves numeric values.",
+    "Original request-extra-info listener could miss reordered events; all four lookup records in this trace do contain wireHeaders.",
+    "Collector was hardened after this run; no new live run was performed because the retained trace has sufficient admission evidence."
+  ]
+}

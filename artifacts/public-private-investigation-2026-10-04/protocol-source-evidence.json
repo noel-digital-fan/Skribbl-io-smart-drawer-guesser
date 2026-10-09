@@ -1,0 +1,182 @@
+[
+  {
+    "key": "play_endpoint",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 36532,
+    "end_exclusive": 36562,
+    "excerpt": "$n=location.origin+\"/api/play\"",
+    "interpretation": "The only application API URL literal in this client. Normal matchmaking delegates selection to this POST endpoint."
+  },
+  {
+    "key": "lookup_selection",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 52490,
+    "end_exclusive": 52522,
+    "excerpt": "e=\"\"!=t?\"id=\"+t:\"lang=\"+Fn.value",
+    "interpretation": "Play chooses id lookup for query/invitation and language matchmaking when query is empty."
+  },
+  {
+    "key": "play_connection",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 52587,
+    "end_exclusive": 52599,
+    "excerpt": "na(e.data,t)",
+    "interpretation": "Response text is passed directly as endpoint; the original query or empty string is passed as login join argument."
+  },
+  {
+    "key": "private_creation",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 52710,
+    "end_exclusive": 52724,
+    "excerpt": "na(e.data,0,1)",
+    "interpretation": "Create Private Room passes join numeric 0, creation true. Homepage labels this button explicitly."
+  },
+  {
+    "key": "transports",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 39223,
+    "end_exclusive": 39280,
+    "excerpt": "transports:[\"websocket\",\"polling\"],closeOnBeforeunload:!1",
+    "interpretation": "Websocket first, polling available. This does not guarantee automatic fallback with this library."
+  },
+  {
+    "key": "server_routing",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 39357,
+    "end_exclusive": 39407,
+    "excerpt": "r.path=\"/\"+a.port+\"/\",e=a.protocol+\"//\"+a.hostname",
+    "interpretation": "For non-local endpoints, the API URL port becomes a reverse-proxy route path on the URL hostname."
+  },
+  {
+    "key": "game_login",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 40027,
+    "end_exclusive": 40096,
+    "excerpt": "join:t,create:n?1:0,name:e[0],lang:Fn.value,code:e[1],avatar:l.avatar",
+    "interpretation": "Application login fields; optional code is name suffix after #. No meaning for code is defined in client."
+  },
+  {
+    "key": "server_identity_assignment",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 40603,
+    "end_exclusive": 40627,
+    "excerpt": "x=e.me,In=e.type,Tn=e.id",
+    "interpretation": "Game user ID, lobby type, and lobby ID are read from server data packet 10; not generated locally."
+  },
+  {
+    "key": "joinerr100",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 39723,
+    "end_exclusive": 39783,
+    "excerpt": "case 100:return E(\"You are already connected to this room!\")",
+    "interpretation": "Client presentation of server error100; does not reveal how the server recognizes a duplicate."
+  },
+  {
+    "key": "joinerr200",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 39784,
+    "end_exclusive": 39860,
+    "excerpt": "case 200:return E(\"Too many users from your IP are connected to this room!\")",
+    "interpretation": "Client presentation explicitly indicates an IP-based per-room connection cap, but no threshold/window in source."
+  },
+  {
+    "key": "votekick_event",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 44747,
+    "end_exclusive": 44751,
+    "excerpt": "ba=5",
+    "interpretation": "Application command/event id5 maps to votekick."
+  },
+  {
+    "key": "vote_totals",
+    "source": "game.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 45830,
+    "end_exclusive": 45843,
+    "excerpt": "i=n[2],l=n[3]",
+    "interpretation": "Server vote broadcast array supplies count and threshold. No local quorum formula is present."
+  },
+  {
+    "key": "private_button",
+    "source": "homepage.html",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 7103,
+    "end_exclusive": 7122,
+    "excerpt": "Create Private Room",
+    "interpretation": "The create button is explicitly private."
+  },
+  {
+    "key": "public_invitations",
+    "source": "homepage.html",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 8870,
+    "end_exclusive": 8905,
+    "excerpt": "Invite your friends to public rooms",
+    "interpretation": "Official UI release notes explicitly present public room invitations as supported."
+  },
+  {
+    "key": "socket_library_version",
+    "source": "socket.io.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 7,
+    "end_exclusive": 23,
+    "excerpt": "Socket.IO v4.8.3",
+    "interpretation": "Version declared by freshly fetched official Socket.IO distribution header."
+  },
+  {
+    "key": "engine_query",
+    "source": "socket.io.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 21609,
+    "end_exclusive": 21655,
+    "excerpt": "n.EIO=4,n.transport=t,this.id&&(n.sid=this.id)",
+    "interpretation": "Engine.IO4 transport query; sid is added only after assignment."
+  },
+  {
+    "key": "engine_session_assignment",
+    "source": "socket.io.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 23121,
+    "end_exclusive": 23165,
+    "excerpt": "this.id=t.sid,this.transport.query.sid=t.sid",
+    "interpretation": "Engine sid assigned from server open handshake."
+  },
+  {
+    "key": "namespace_session_assignment",
+    "source": "socket.io.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 37712,
+    "end_exclusive": 37768,
+    "excerpt": "t.data&&t.data.sid?this.onconnect(t.data.sid,t.data.pid)",
+    "interpretation": "Socket.IO namespace connection sid is separate from Engine.IO sid; optional pid is library recovery data."
+  },
+  {
+    "key": "socket_protocol",
+    "source": "socket.io.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 33313,
+    "end_exclusive": 33323,
+    "excerpt": "protocol:5",
+    "interpretation": "Socket.IO packet parser protocol5, distinct from Engine.IO protocol4."
+  },
+  {
+    "key": "fallback_condition",
+    "source": "socket.io.js",
+    "offset_unit": "zero-based Unicode character offset in decoded UTF-8 text",
+    "start": 25321,
+    "end_exclusive": 25373,
+    "excerpt": "this.opts.tryAllTransports&&this.transports.length>1",
+    "interpretation": "Library only tries another transport on opening errors when tryAllTransports is enabled. Game does not set it."
+  }
+]

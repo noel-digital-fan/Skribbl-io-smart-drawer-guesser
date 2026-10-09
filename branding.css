@@ -1,0 +1,52 @@
+/* Locally bundled lettering and artwork; never restyle the host game's UI. */
+@font-face {
+  font-family: "SSDG Pixelify";
+  src: url("chrome-extension://__MSG_@@extension_id__/assets/fonts/PixelifySans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  padding: 2px 3px 4px;
+  font: 700 40px/1 "SSDG Pixelify", monospace;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b {
+  display: inline-block;
+  color: #ff3e48;
+  font-weight: 700;
+  /* Integer offsets keep the outline square instead of rounding the pixel corners. */
+  text-shadow: -2px -2px 0 #101827, 0 -2px 0 #101827, 2px -2px 0 #101827,
+    -2px 0 0 #101827, 2px 0 0 #101827, -2px 2px 0 #101827,
+    0 2px 0 #101827, 2px 2px 0 #101827, 0 4px 0 #101827;
+}
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b:nth-child(2) { color: #ff921c; }
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b:nth-child(3) { color: #ffe51b; }
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b:nth-child(4) { color: #6ed52a; }
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b:nth-child(5) { color: #12d9db; }
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b:nth-child(6) { color: #6387ff; }
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark b:nth-child(7) { color: #ef63e9; }
+:is(#skribbl-smart-drawer-guesser-panel, .popup-shell) .ssdg-wordmark-subtitle {
+  display: block;
+  margin-top: 3px;
+  color: #fff9da;
+  font: 600 16px/1.25 "SSDG Pixelify", monospace;
+  letter-spacing: 0;
+  text-shadow: -1px -1px 0 #101827, 1px -1px 0 #101827,
+    -1px 1px 0 #101827, 1px 1px 0 #101827, 0 2px 0 #101827;
+  white-space: nowrap;
+}
+.popup-shell .ssdg-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+@media (forced-colors: active) {
+  :is(#skribbl-smart-drawer-guesser-panel, .popup-shell) :is(.ssdg-wordmark b, .ssdg-wordmark-subtitle) {
+    color: CanvasText !important;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+  }
+}

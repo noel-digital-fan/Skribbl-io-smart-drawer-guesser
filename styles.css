@@ -1,27 +1,265 @@
-.sg-footer {
+/* The extension theme stays inside the panel and never changes the game. */
+#skribbl-smart-drawer-guesser-panel {
+  --ssdg-bg: #edf3fc;
+  --ssdg-surface: #ffffff;
+  --ssdg-raised: #f1f6ff;
+  --ssdg-field: #ffffff;
+  --ssdg-border: #c3d3ed;
+  --ssdg-border-hover: #5882c4;
+  --ssdg-text: #23395d;
+  --ssdg-muted: #455e81;
+  --ssdg-subtle: #536b8e;
+  --ssdg-accent: #2462c5;
+  --ssdg-primary: #2671df;
+  --ssdg-primary-hover: #195fc7;
+  --ssdg-success: #227346;
+  --ssdg-focus: #174ba0;
+  position: fixed;
+  box-sizing: border-box;
+  top: 72px;
+  right: 18px;
+  left: auto;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 360px;
+  max-width: calc(100vw - 12px);
+  max-height: calc(100vh - 12px);
+  max-height: calc(100dvh - 12px);
+  overflow: hidden;
+  color: var(--ssdg-text);
+  background: #28569a url("chrome-extension://__MSG_@@extension_id__/assets/doodle-blue.png") center top / 420px auto repeat;
+  border: 3px solid #173e80;
+  border-radius: 18px;
+  box-shadow: 0 6px 0 #123269, 0 18px 42px #112b5740;
+  font: 12px/1.45 "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  color-scheme: only light;
+  isolation: isolate;
+  container-type: inline-size;
+  filter: none !important;
+  z-index: 999999;
 }
 
-/* The full Windows 11 acrylic theme is injected by content.js so it can stay
-   isolated from skribbl.io's own styles. */
+#skribbl-smart-drawer-guesser-panel *,
+#skribbl-smart-drawer-guesser-panel *::before,
+#skribbl-smart-drawer-guesser-panel *::after { box-sizing: border-box; }
+#skribbl-smart-drawer-guesser-panel [hidden] { display: none !important; }
+#skribbl-smart-drawer-guesser-panel[hidden] { display: none !important; }
+#skribbl-smart-drawer-guesser-panel.collapsed { height: auto !important; }
 
-.sg-footer-row {
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle { position: absolute; z-index: 2; touch-action: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="n"] { top: 0; left: 12px; right: 12px; height: 5px; cursor: ns-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="s"] { bottom: 0; left: 12px; right: 12px; height: 5px; cursor: ns-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="e"] { right: 0; top: 12px; bottom: 12px; width: 5px; cursor: ew-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="w"] { left: 0; top: 12px; bottom: 12px; width: 5px; cursor: ew-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="ne"],
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="nw"],
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="se"],
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="sw"] { width: 12px; height: 12px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="ne"] { top: 0; right: 0; cursor: nesw-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="nw"] { top: 0; left: 0; cursor: nwse-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="se"] { bottom: 0; right: 0; cursor: nwse-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="sw"] { bottom: 0; left: 0; cursor: nesw-resize; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="se"]::after { content: ""; position: absolute; right: 3px; bottom: 3px; width: 6px; height: 6px; border-right: 1px solid var(--ssdg-muted); border-bottom: 1px solid var(--ssdg-muted); }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle:focus-visible { outline: 2px solid var(--ssdg-focus); outline-offset: -2px; }
+#skribbl-smart-drawer-guesser-panel.collapsed .ssdg-resize-handle:not([data-edge="e"]):not([data-edge="w"]) { display: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-header { touch-action: none; }
+#skribbl-smart-drawer-guesser-panel.ssdg-window-interacting,
+#skribbl-smart-drawer-guesser-panel.ssdg-window-interacting * { user-select: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls #ssdg-hide-btn::before { transform: rotate(45deg); }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls #ssdg-hide-btn::after { transform: rotate(-45deg); opacity: 1; }
+#skribbl-smart-drawer-guesser-panel .ssdg-footer-row select { max-width: 140px; }
+
+#ssdg-panel-restore { position: fixed; z-index: 999999; width: 18px; height: 18px; padding: 0; border: 1px solid #2462c5; border-radius: 4px; color: #23395d; background: #f1f6ff; font: 14px/1 system-ui, sans-serif; opacity: 0; cursor: pointer; }
+#ssdg-panel-restore:is(:hover, :focus-visible) { opacity: 1; }
+#ssdg-panel-restore[data-position^="top"] { top: 4px; }
+#ssdg-panel-restore[data-position^="bottom"] { bottom: 4px; }
+#ssdg-panel-restore[data-position$="left"] { left: 4px; }
+#ssdg-panel-restore[data-position$="right"] { right: 4px; }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  min-height: 106px;
+  gap: 12px;
+  padding: 14px 16px;
+  background: transparent;
+  border-bottom: 3px solid #173e80;
+  cursor: move;
+  user-select: none;
 }
 
-.sg-footer-row input {
-  width: 65px;
-  padding: 3px 6px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
+#skribbl-smart-drawer-guesser-panel .ssdg-title { display: flex; align-items: center; gap: 10px; min-width: 0; color: var(--ssdg-text); }
+#skribbl-smart-drawer-guesser-panel .ssdg-title-text { display: block; font-size: 14px; font-weight: 700; line-height: 1.3; letter-spacing: -.15px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-title-subtitle { display: block; margin-top: 2px; color: var(--ssdg-muted); font-size: 10px; font-weight: 500; }
+#skribbl-smart-drawer-guesser-panel .ssdg-brand-mark,
+#skribbl-smart-drawer-guesser-panel .ssdg-logo { display: grid; place-items: center; flex: 0 0 34px; width: 34px; height: 34px; color: #fff6bb; background: #ffffff20; border: 1px solid #ffffff40; border-radius: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-brand-mark svg { width: 20px; height: 20px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-title-icon { width: 30px; height: 30px; object-fit: contain; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls { display: flex; gap: 6px; }
+
+#skribbl-smart-drawer-guesser-panel button {
+  min-height: 32px;
+  padding: 6px 10px;
+  color: var(--ssdg-text);
+  background: var(--ssdg-raised);
+  border: 1px solid var(--ssdg-border);
+  border-radius: 8px;
+  font: 600 11px/1.35 "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #c3d3ed;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease, box-shadow 140ms ease;
+}
+
+#skribbl-smart-drawer-guesser-panel button:hover:not(:disabled) { background: #e5efff; border-color: var(--ssdg-border-hover); }
+#skribbl-smart-drawer-guesser-panel button:active:not(:disabled) { background: #d8e8ff; }
+#skribbl-smart-drawer-guesser-panel :is(button, input, select, textarea):disabled { opacity: .45; cursor: not-allowed; }
+#skribbl-smart-drawer-guesser-panel :is(button, a, input, select, textarea):focus-visible { outline: 2px solid var(--ssdg-focus); outline-offset: 2px; }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button { position: relative; display: grid; place-items: center; width: 28px; min-height: 28px; padding: 0; color: var(--ssdg-muted); background: transparent; border-color: transparent; font-size: 0; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button::before,
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button::after { content: ""; position: absolute; width: 10px; height: 2px; background: currentColor; border-radius: 1px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button::after { transform: rotate(90deg); opacity: 0; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button[aria-expanded="false"]::after { opacity: 1; }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-body { flex: 1 1 auto; min-height: 0; padding: 14px; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #97aed2 transparent; }
+#skribbl-smart-drawer-guesser-panel.collapsed .ssdg-body { display: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-body::-webkit-scrollbar,
+#skribbl-smart-drawer-guesser-panel .ssdg-list::-webkit-scrollbar { width: 6px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-body::-webkit-scrollbar-thumb,
+#skribbl-smart-drawer-guesser-panel .ssdg-list::-webkit-scrollbar-thumb { background: #97aed2; border-radius: 6px; }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-toolbar { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .72fr); gap: 6px; margin-bottom: 12px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-language-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; color: var(--ssdg-muted); }
+#skribbl-smart-drawer-guesser-panel .ssdg-language-row select { width: 132px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word-source { display: block; margin: -2px 0 12px; color: var(--ssdg-subtle); font-size: 10px; line-height: 1.45; text-decoration: underline; text-underline-offset: 2px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word-source:hover { color: var(--ssdg-accent); }
+#skribbl-smart-drawer-guesser-panel .ssdg-glass-btn,
+#skribbl-smart-drawer-guesser-panel .ssdg-stat-pill { min-width: 0; white-space: nowrap; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stat-pill { display: flex; align-items: center; justify-content: center; gap: 5px; padding: 6px 8px; color: var(--ssdg-muted); background: var(--ssdg-surface); border: 1px solid var(--ssdg-border); border-radius: 7px; font-size: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stat-pill strong { color: var(--ssdg-text); font-size: 12px; font-variant-numeric: tabular-nums; }
+#skribbl-smart-drawer-guesser-panel #ssdg-auto-btn.active,
+#skribbl-smart-drawer-guesser-panel .ssdg-force-btn.active { color: #205d39; background: #e4f6dc; border-color: #8bbe75; }
+#skribbl-smart-drawer-guesser-panel .ssdg-icon { flex: 0 0 auto; font-size: 12px; }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-hint-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; padding: 12px; margin-bottom: 10px; background: var(--ssdg-surface); border: 1px solid var(--ssdg-border); border-radius: 9px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-hint { min-width: 0; color: var(--ssdg-muted); font-size: 11px; overflow-wrap: anywhere; }
+#skribbl-smart-drawer-guesser-panel .ssdg-hint span { color: #2357a2; font: 600 14px "Cascadia Mono", Consolas, monospace; letter-spacing: 1.5px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-count { color: var(--ssdg-subtle); font-size: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-input-wrap { position: relative; margin-bottom: 10px; }
+
+#skribbl-smart-drawer-guesser-panel :where(input:not([type="checkbox"]):not([type="range"]), textarea, select) {
+  min-height: 32px;
+  min-width: 0;
+  padding: 6px 9px;
+  color: var(--ssdg-text);
+  background: var(--ssdg-field);
+  border: 1px solid var(--ssdg-border);
+  border-radius: 7px;
+  font: 11px/1.4 "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+#skribbl-smart-drawer-guesser-panel :where(input:not([type="checkbox"]):not([type="range"]), textarea, select):hover:not(:disabled) { border-color: var(--ssdg-border-hover); }
+#skribbl-smart-drawer-guesser-panel :is(input, textarea, select):focus-visible { border-color: var(--ssdg-focus); }
+#skribbl-smart-drawer-guesser-panel :is(input, textarea)::placeholder { color: var(--ssdg-subtle); opacity: 1; }
+#skribbl-smart-drawer-guesser-panel select { cursor: pointer; }
+#skribbl-smart-drawer-guesser-panel input[type="checkbox"] { width: 15px; height: 15px; accent-color: var(--ssdg-primary); cursor: pointer; }
+#skribbl-smart-drawer-guesser-panel .ssdg-search { width: 100%; padding-right: 32px; appearance: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-search::-webkit-search-cancel-button { display: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-input-clear { position: absolute; top: 50%; right: 5px; width: 24px; min-height: 24px; padding: 0; color: var(--ssdg-muted); background: transparent; border-color: transparent; font-size: 16px; transform: translateY(-50%); }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-list-wrap { position: relative; margin-bottom: 14px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-list { display: flex; flex-wrap: wrap; gap: 6px; max-height: 182px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-gutter: stable; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word { min-height: 30px; padding: 5px 9px; background: var(--ssdg-surface); font-size: 11px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word:hover { color: #16498f; background: #e4efff; border-color: #719bdd; }
+#skribbl-smart-drawer-guesser-panel .ssdg-final-candidates .ssdg-word { color: #205d39; background: #e9f7e1; border-color: #9ac585; }
+#skribbl-smart-drawer-guesser-panel .ssdg-final-candidates .ssdg-word-label { color: inherit; }
+#skribbl-smart-drawer-guesser-panel .ssdg-more { width: 100%; padding: 6px 0; color: var(--ssdg-subtle); text-align: center; font-size: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-scroll-top { position: absolute; right: 9px; bottom: 8px; width: 28px; min-height: 28px; padding: 0; color: #fff; background: var(--ssdg-primary); border-color: #1654ad; box-shadow: 0 3px 8px #0005; opacity: 0; visibility: hidden; }
+#skribbl-smart-drawer-guesser-panel .ssdg-scroll-top.visible { opacity: 1; visibility: visible; }
+#skribbl-smart-drawer-guesser-panel .ssdg-status { display: none; margin-bottom: 10px; padding: 9px 10px; color: #24528c; background: #e7f1ff; border: 1px solid #a5c4ed; border-radius: 7px; font-size: 11px; line-height: 1.45; }
+#skribbl-smart-drawer-guesser-panel .ssdg-status.success { color: #205d39; background: #e9f7e1; border-color: #9ac585; }
+
+#skribbl-smart-drawer-guesser-panel .ssdg-footer { display: flex; flex-direction: column; gap: 9px; margin-top: 12px; padding: 12px; background: var(--ssdg-surface); border: 1px solid var(--ssdg-border); border-radius: 9px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-section-heading { margin: 1px 0 3px; color: var(--ssdg-text); font-size: 11px; font-weight: 650; }
+#skribbl-smart-drawer-guesser-panel .ssdg-section-heading:not(:first-child) { padding-top: 10px; border-top: 1px solid var(--ssdg-border); }
+#skribbl-smart-drawer-guesser-panel .ssdg-footer-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--ssdg-muted); font-size: 11px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-footer-row input { width: 74px; min-height: 29px; padding: 4px 6px; text-align: right; font-variant-numeric: tabular-nums; }
+#skribbl-smart-drawer-guesser-panel .ssdg-footer-row button { min-height: 28px; padding: 4px 8px; font-size: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stats-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px; padding: 8px 0; color: var(--ssdg-subtle); font-size: 10px; border-top: 1px solid var(--ssdg-border); }
+#skribbl-smart-drawer-guesser-panel .ssdg-stats-row strong { color: var(--ssdg-text); font-weight: 600; font-variant-numeric: tabular-nums; }
+#skribbl-smart-drawer-guesser-panel .ssdg-data-row { display: flex; gap: 6px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-data-btn { flex: 1; min-width: 0; font-size: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-shortcuts { color: var(--ssdg-subtle); font-size: 9px; text-align: center; }
+#skribbl-smart-drawer-guesser-panel .ssdg-privacy-link { color: var(--ssdg-muted); font-size: 10px; text-align: center; text-decoration: none; text-underline-offset: 3px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-privacy-link:hover { color: var(--ssdg-accent); text-decoration: underline; }
+
+/* Playful chrome, quiet paper surfaces, and a palette borrowed from the canvas. */
+#skribbl-smart-drawer-guesser-panel .ssdg-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#skribbl-smart-drawer-guesser-panel .ssdg-title-text { line-height: 1; }
+#skribbl-smart-drawer-guesser-panel.collapsed .ssdg-header { min-height: 76px; padding-block: 10px; }
+#skribbl-smart-drawer-guesser-panel.collapsed .ssdg-wordmark { font-size: 30px; }
+#skribbl-smart-drawer-guesser-panel.collapsed .ssdg-wordmark-subtitle { font-size: 15px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-brand-mark { width: 43px; height: 43px; flex-basis: 43px; overflow: hidden; background: #2255a1; border: 2px solid #143c7d; border-radius: 10px 8px 11px 8px; box-shadow: 2px 3px 0 #123269; transform: rotate(-6deg); }
+#skribbl-smart-drawer-guesser-panel .ssdg-quill-icon { display: block; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls { gap: 4px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button { color: #fff; background: #ffffff12; border: 1px solid #ffffff40; box-shadow: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button:hover:not(:disabled) { color: #fff; background: #ffffff30; border-color: #fff; }
+#skribbl-smart-drawer-guesser-panel .ssdg-controls button:focus-visible { outline-color: #ffe07a; }
+#skribbl-smart-drawer-guesser-panel .ssdg-body { padding: 12px; background: transparent; }
+#skribbl-smart-drawer-guesser-panel :is(#ssdg-d-guess-pane, #ssdg-d-draw-pane) { padding: 12px; background: #edf3fc; border: 1px solid #123269; border-radius: 12px; box-shadow: 0 3px 0 #12326970; }
+#skribbl-smart-drawer-guesser-panel button:active:not(:disabled) { box-shadow: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-language-row { padding: 0 2px; font-size: 11px; font-weight: 700; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stat-pill { border-style: dashed; background: #ffffffb3; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stat-pill strong { color: #1f61b8; }
+#skribbl-smart-drawer-guesser-panel .ssdg-hint-card { position: relative; display: block; padding: 17px 12px 13px; border: 2px solid #d9bd63; border-radius: 12px 10px 14px 11px; background: #fff9df; text-align: center; box-shadow: 0 3px 0 #e9ddb2; }
+#skribbl-smart-drawer-guesser-panel .ssdg-hint { color: #78632b; font-size: 9px; font-weight: 800; letter-spacing: 1.5px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-hint span { display: block; margin: 7px 0; color: #263c61; font-size: 23px; line-height: 1.3; letter-spacing: 4px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-count { color: #78632b; font-size: 10px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-input-wrap { margin-top: 14px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-search { min-height: 38px; padding-left: 12px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-input-clear { box-shadow: none; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word { border-radius: 8px 8px 9px 7px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word:nth-child(3n+2) { background: #f3f7ff; }
+#skribbl-smart-drawer-guesser-panel .ssdg-final-candidates .ssdg-word { color: #275d36; background: #e9f7e1; border-color: #9ac585; box-shadow: 0 2px 0 #c3dcb6; }
+#skribbl-smart-drawer-guesser-panel .ssdg-word:hover:not(:disabled) { color: #fff; background: #2671df; border-color: #1654ad; box-shadow: 0 2px 0 #1654ad; }
+#skribbl-smart-drawer-guesser-panel .ssdg-empty { display: none; padding: 18px 8px; text-align: center; color: var(--ssdg-subtle); font-size: 11px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-list:empty + .ssdg-empty { display: grid; justify-items: center; gap: 7px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-empty strong { color: var(--ssdg-text); font-size: 13px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-empty-doodle { display: grid; place-items: center; width: 36px; height: 36px; margin-bottom: 2px; color: #4573b5; background: #e0eaff; border: 2px solid #a1bce4; border-radius: 13px 11px 14px 8px; font: 800 24px "Comic Sans MS", cursive; transform: rotate(-8deg); }
+#skribbl-smart-drawer-guesser-panel .ssdg-footer { gap: 10px; padding: 13px; border-radius: 12px; box-shadow: 0 3px 0 #dbe5f4; }
+#skribbl-smart-drawer-guesser-panel .ssdg-section-heading { color: #244b85; font-size: 12px; font-weight: 800; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stats-row { padding: 10px 0; border-bottom: 1px solid var(--ssdg-border); }
+#skribbl-smart-drawer-guesser-panel .ssdg-stats-row span { display: grid; gap: 3px; text-align: center; }
+#skribbl-smart-drawer-guesser-panel .ssdg-stats-row strong { color: #255fb0; font-size: 18px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-shortcuts { font-size: 9px; line-height: 2.2; }
+#skribbl-smart-drawer-guesser-panel kbd { display: inline-block; padding: 0 4px; color: #455e81; background: #f3f6fc; border: 1px solid var(--ssdg-border); border-bottom-width: 2px; border-radius: 4px; font-family: inherit; font-size: 9px; line-height: 1.6; }
+#skribbl-smart-drawer-guesser-panel .ssdg-delay-warning { border-color: #bd8532; background: #fff6dc; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="se"] { width: 18px; height: 18px; }
+#skribbl-smart-drawer-guesser-panel .ssdg-resize-handle[data-edge="se"]::after { width: 8px; height: 8px; border-width: 2px; border-color: #6486ba; }
+@keyframes ssdg-word-appear { from { opacity: 0; translate: 0 3px; } to { opacity: 1; translate: 0 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  #skribbl-smart-drawer-guesser-panel .ssdg-word-new { animation: ssdg-word-appear 160ms ease-out both; }
+}
+@media (max-width: 400px) {
+  #skribbl-smart-drawer-guesser-panel { right: 6px; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-header { padding: 10px 12px; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-body { padding: 10px; }
+}
+@container (max-width: 320px) {
+  #skribbl-smart-drawer-guesser-panel .ssdg-brand-mark { display: none; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-wordmark { font-size: 38px; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-wordmark-subtitle { font-size: 14px; }
+  #skribbl-smart-drawer-guesser-panel :is(#ssdg-d-guess-pane, #ssdg-d-draw-pane) { padding: 9px; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-toolbar { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  #skribbl-smart-drawer-guesser-panel .ssdg-stat-pill { grid-column: 1 / -1; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-footer-row { flex-wrap: wrap; gap: 5px; }
+  #skribbl-smart-drawer-guesser-panel .ssdg-footer-row select { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { #skribbl-smart-drawer-guesser-panel * { animation: none !important; transition: none !important; } }
+@media (forced-colors: active) {
+  #skribbl-smart-drawer-guesser-panel { forced-color-adjust: auto; color: CanvasText; background: Canvas; border-color: CanvasText; }
+  #skribbl-smart-drawer-guesser-panel :is(button, input, select, textarea) { forced-color-adjust: auto; }
 }

@@ -1,0 +1,43 @@
+# Official client protocol review
+
+Reviewed the freshly downloaded `game.js`, `homepage.html`, and `socket.io.js` in this directory. Fetch metadata and hashes are in `source-fetches.json` / `socket-source-fetch.json`. This review is static client-source evidence, not a live admission experiment. Bounded original excerpts with zero-based decoded UTF-8 character offsets are in `protocol-source-evidence.json`. These offsets are character offsets, not byte offsets or line numbers. The minified files each have very few lines; cite artifact and evidence key rather than fabricated formatted line numbers.
+
+## Confirmed in the current browser client
+
+- No-query Play POSTs `lang=<selected language>` as `application/x-www-form-urlencoded` to same-origin `/api/play`. The successful HTTP200 response text is treated as a game-server URL. The Socket.IO `login.join` value is the empty string; `create` is 0. Thus the browser does not enumerate public rooms or derive the public room ID to perform ordinary matchmaking; server-side matchmaking must choose a lobby. Exact matching algorithm and when selection happens remain server unknowns.
+- Invitation Play takes the entire text after the first `?` as the join value and POSTs `id=<that value>` to the same API. Its response text similarly selects a server endpoint. The URL query is not treated as standard `?id=...` key-value syntax; official invitation links are `https://skribbl.io/?<room identifier>`.
+- The button labelled Create Private Room POSTs `lang=<language>`, then connects with numeric `join:0` and `create:1`. Private creation is an application login flag, not a separately observed private WebSocket endpoint.
+- Login contains `join`, `create`, `name`, `lang`, optional `code` from the part of the user-entered name after `#`, and `avatar`. The optional name code has no client-defined purpose; calling it an auth token would be an unsupported assumption. With no suffix it is undefined and absent in ordinary JSON serialization.
+- For non-local server endpoints, the returned URL port is moved into the Socket.IO transport path, and the connect origin becomes protocol plus hostname. Therefore an API URL port is a routing/server identifier, not a room ID. Actual port values and server reuse require traffic.
+- Options explicitly select websocket then polling and disable close-on-beforeunload. The freshly fetched distribution header identifies Socket.IO4.8.3, its parser protocol is5, and Engine.IO transport query protocol is4. It does not prove automatic polling fallback: library transport retry on an opening error requires `tryAllTransports`, which game.js does not set.
+- Engine.IO server open handshake assigns Engine `sid`, pingInterval, pingTimeout, maxPayload; client replies pong to server ping. Socket.IO namespace CONNECT supplies a separate `sid` (socket ID), and optionally `pid` for generic connection recovery. The game does not explicitly enable or handle recovery itself. These IDs are distinct from room identity and room user identity.
+- Application `data` event with packet `id:10` supplies the initial lobby snapshot. `.me` is assigned to current numeric player ID, `.id` to invitation/lobby ID, and `.type` to lobby type. Snapshot also supplies users, settings, owner, round, state. Server origin of these values is visible; server generation/randomness/entropy and public/private numeric type mapping are not proven by static code.
+- The invitation input/link is populated for every initial snapshot, with no public/private branch. Homepage release notes explicitly advertise invitations to public rooms. Public room invite targeting is therefore intended by current UI/source; whether a particular automated session is admitted is a different question.
+- No current invoked public-room listing flow is visible. The only application API literal is `/api/play`; `roomsUpdate(t)` occurs once in a dormant modal branch without a definition or matching room-list request/UI. Do not conclude that undocumented server listing routes do not exist.
+- The only functional use of lobby type after snapshot assignment is a join notification delay: type0 delays visible joining by1second. Type mapping should be established with captured public/private snapshots, not by this timing branch.
+
+## Server error presentations
+
+The client maps `joinerr` codes as follows:1 room absent;2 full;3 kick cooldown;4 room ban;5 joining too quickly;100 already connected to this room;200 too many users from the source IP in this room;300 kicked too many times. HTTP503 or0 is rendered as maintenance; other non200 HTTP status is generic failure. Disconnect `reason:1` is kicked, `reason:2` banned.
+
+These strings show intended server rejection categories, not verified active limits. No source reveals the code100 identity key, IP cap, rate window, cooldown duration, or whether public/private rooms apply different settings. Code200 explicitly mentions source IP; code100 does not. Equating code100 with browser, token, cookie, account, or IP identity is speculation until controlled experiments/server logs.
+
+## Vote semantics
+
+UI votekick emits application `data` packet `{id:5,data:<target numeric player ID>}`. It does not attach a Socket.IO callback or wait for an explicit callback ack. Broadcast packet5 carries `[voterId,targetId,voteCount,requiredCount]`; the client displays server supplied count/threshold. No client quorum formula is present. Removal is a separate packet2 with player id and reason; a vote broadcast does not itself prove removal. UI checks the target is not self and refuses the lobby owner; admin-protected selection is enforced through modal visibility. Server vote deduplication, eligibility, protected roles, vote expiration, and threshold formula are not recoverable from this client.
+
+## Application auth and anti-bot evidence limits
+
+No application `captcha`, `token`, `auth`, `document.cookie`, `withCredentials`, or fingerprint collection/login field occurs in game.js. `navigator.userAgent` is used for a Safari behavior default, and WebSocket browser headers are generated below application code. LocalStorage stores settings, avatar, language/name, and last-ad time; no game/session token storage is visible. Homepage includes advertising/consent/analytics scripts. Generic Socket.IO library support for auth and cookies is not evidence that this game uses it; browser-managed cookies, proxy/WAF handling, HTTPOnly cookies, server IP checks, and server traffic analysis remain possible.
+
+The ad pre-roll gate stores lastAd then optionally starts an ad if at least1minute has elapsed. On first use, unavailable ad runtime, or caught ad exception it immediately runs connection callback. This is an ad timing gate, not demonstrated rate limiting.
+
+## Existing helper implementation compared with official flow
+
+`votekick-runner.js`460-517 creates separate Socket.IO instances using the observed primary factory, URI and options, sets forceNew/multiplex false/reconnection false, and emits `login` using the server supplied current lobby ID, create0, primary language/avatar, and helper name. It skips `/api/play` per helper. It drops optional auth/query and optional login `code`. Current official primary options have no auth/query; normal names have no code, so these omissions alone do not demonstrate the failure.
+
+The copied URI/path is a plausible destination for the existing room; correctness should be compared to a normal invitation flow and confirmed with data10, not assumed from successful transport connect. Helpers retain the same browser/network environment, source IP and browser cookie jar. A fresh Socket.IO sid is a transport session, not proof of an independent server-recognized player identity.
+
+Runner448-456 labels type0/code100 as a public connection restriction, but this source-level diagnosis is not independent experimental evidence. Treat the concrete failure stage as unknown until traffic confirms a helper reached namespace connect, sent login, and received100 rather than merely timing out or connecting elsewhere. Calling it a handshake bug or CAPTCHA blocker without that event is unsupported.
+
+A safe implementation plan should first add precise diagnostic events and server-side tests, preserve server rejection categories, and compare native invitation admission. Do not suggest changing IDs/ports, guessing room identifiers, swapping IPs, randomizing fingerprints, dropping cookies, or increasing join frequency to defeat legitimate admission rules. If the server is responsible for the admission distinction, changing extension fields cannot confer permission; owned server configuration/test hooks and controlled clients are the appropriate route.

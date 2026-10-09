@@ -1,0 +1,33 @@
+﻿[
+    {
+        "url":  "https://skribbl.io/",
+        "status":  200,
+        "headers":  {
+                        "Connection":  "keep-alive",
+                        "Content-Length":  "21530",
+                        "Content-Type":  "text/html; charset=utf-8",
+                        "Date":  "Sun, 04 Oct 2026 22:44:15 GMT",
+                        "ETag":  "W/\"541a-zdSY0Hus8A3Cxovru9Yd+QHtg7o\"",
+                        "Server":  "nginx/1.30.1",
+                        "X-Powered-By":  "Express"
+                    },
+        "sha256":  "9DFB62E32BD01F1391CB64793EE87EDA632D0A544E863B1B9F0034B6A85A583A"
+    },
+    {
+        "url":  "https://skribbl.io/js/game.js",
+        "status":  200,
+        "headers":  {
+                        "Connection":  "keep-alive",
+                        "Accept-Ranges":  "bytes",
+                        "Content-Length":  "59478",
+                        "Cache-Control":  "public, max-age=0",
+                        "Content-Type":  "application/javascript; charset=UTF-8",
+                        "Date":  "Sun, 04 Oct 2026 22:44:15 GMT",
+                        "ETag":  "W/\"e856-1a103217618\"",
+                        "Last-Modified":  "Sat, 03 Oct 2026 18:58:07 GMT",
+                        "Server":  "nginx/1.30.1",
+                        "X-Powered-By":  "Express"
+                    },
+        "sha256":  "5BBECAE0727C84008B08E006DCEB5838C42237E48AE2C8A0FADDD1484CF57829"
+    }
+]
